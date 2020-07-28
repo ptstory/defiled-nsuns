@@ -2,9 +2,9 @@ import 'package:defiled_nsuns/cycle/exercise.dart';
 import 'package:flutter/material.dart';
 
 class DayProgram {
-  const DayProgram({this.day, this.exercises});
+  const DayProgram({this.title, this.exercises});
 
-  final String day;
+  final String title;
   final List<Exercise> exercises;
 }
 

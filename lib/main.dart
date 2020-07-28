@@ -3,7 +3,7 @@ import 'package:defiled_nsuns/cycle/exercise.dart';
 import 'package:flutter/material.dart';
 
 const List<DayProgram> programs = const <DayProgram>[
-  DayProgram(day: 'Monday', exercises: const <Exercise>[
+  DayProgram(title: 'Bench/Overhead Press', exercises: const <Exercise>[
     Exercise(
         name: 'Bench Press',
         targetMuscle: TargetMuscle.chest,
@@ -12,6 +12,15 @@ const List<DayProgram> programs = const <DayProgram>[
           ExerciseSet(weight: 65, repetitions: 6, amrap: false),
           ExerciseSet(weight: 70, repetitions: 1, amrap: true),
           ExerciseSet(weight: 65, repetitions: 6, amrap: false),
+        ]),
+    Exercise(
+        name: 'Overhead Press',
+        targetMuscle: TargetMuscle.shoulders,
+        sets: const <ExerciseSet>[
+          ExerciseSet(weight: 20, repetitions: 8, amrap: false),
+          ExerciseSet(weight: 30, repetitions: 6, amrap: false),
+          ExerciseSet(weight: 35, repetitions: 1, amrap: true),
+          ExerciseSet(weight: 30, repetitions: 6, amrap: false),
         ])
   ])
 ];
@@ -30,7 +39,7 @@ class _CycleConfiguratorState extends State<CycleConfigurator>
   void initState() {
     super.initState();
     _tabController = TabController(length: programs.length, vsync: this);
-    _title = programs[0].day;
+    _title = programs[0].title;
   }
 
   @override
@@ -44,7 +53,7 @@ class _CycleConfiguratorState extends State<CycleConfigurator>
     if (newIndex < 0 || newIndex >= _tabController.length) return;
     _tabController.animateTo(newIndex);
     setState(() {
-      _title = programs[newIndex].day;
+      _title = programs[newIndex].title;
     });
   }
 
