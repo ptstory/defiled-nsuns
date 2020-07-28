@@ -37,7 +37,7 @@ class ExerciseWidget extends StatelessWidget {
       padding: insets,
       child: Container(
           decoration: BoxDecoration(
-              color: Color.fromRGBO(255, 0, 0, 0.1), border: Border.all()),
+              color: Color.fromRGBO(0, 0, 0, 0.1), border: Border.all()),
           child: Padding(
               padding: insets,
               child: Column(
@@ -48,8 +48,8 @@ class ExerciseWidget extends StatelessWidget {
                         padding: insets,
                         child: Container(
                             decoration: BoxDecoration(
-                                color: Color.fromRGBO(0, 0, 255, 0.1),
-                                border: Border.all()),
+                                color: Color.fromRGBO(0, 0, 0, 0.1),
+                                    border: Border.all()),
                             child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
