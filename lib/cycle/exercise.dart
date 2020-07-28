@@ -1,3 +1,4 @@
+import 'package:defiled_nsuns/cycle/exerciseset.dart';
 import 'package:flutter/material.dart';
 
 class Exercise {
@@ -8,29 +9,20 @@ class Exercise {
   final List<ExerciseSet> sets;
 }
 
-class ExerciseSet {
-  const ExerciseSet({this.weight, this.repetitions});
-
-  final int weight;
-  final int repetitions;
-
-  bool isAmrap() => repetitions == 1;
-
-  String repetitionsToString() {
-    var reps = repetitions.toString();
-    if (isAmrap()) {
-      reps = reps + '+';
-    }
-    return reps;
-  }
-}
-
-// Add field to log actual reps
-class ExerciseWidget extends StatelessWidget {
-  const ExerciseWidget({this.exercise});
+class ExerciseWidget extends StatefulWidget {
+  ExerciseWidget({this.exercise});
 
   final Exercise exercise;
-  final TextStyle textStyle = const TextStyle(fontSize: 20);
+
+  @override
+  State<StatefulWidget> createState() =>
+      _ExerciseWidgetState(exercise: exercise);
+}
+
+class _ExerciseWidgetState extends State<ExerciseWidget> {
+  _ExerciseWidgetState({this.exercise});
+
+  final Exercise exercise;
   final EdgeInsets insets = const EdgeInsets.all(4);
 
   @override
@@ -45,29 +37,9 @@ class ExerciseWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Text(exercise.name, style: TextStyle(fontSize: 30)),
-                    ...exercise.sets.map((set) => Padding(
-                        padding: insets,
-                        child: Container(
-                            decoration: BoxDecoration(
-                                color: Color.fromRGBO(0, 0, 0, 0.1),
-                                    border: Border.all()),
-                            child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: <Widget>[
-                                  Column(children: <Widget>[
-                                    Text('weight'),
-                                    Text('${set.weight} kg', style: textStyle)
-                                  ]),
-                                  Column(
-                                    children: <Widget>[
-                                      Text('reps'),
-                                      Text(set.repetitionsToString(),
-                                          style: textStyle)
-                                    ],
-                                  )
-                                ]))))
-                  ]))));
+                        ...exercise.sets.map((set) =>
+                            ExerciseSetWidget(set: set))
+                      ]))));
 }
 
 enum TargetMuscle { chest, shoulders, back, legs, abs }
