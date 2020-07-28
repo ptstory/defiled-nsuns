@@ -8,19 +8,19 @@ const List<DayProgram> programs = const <DayProgram>[
         name: 'Bench Press',
         targetMuscle: TargetMuscle.chest,
         sets: const <ExerciseSet>[
-          ExerciseSet(weight: 60, repetitions: 8, amrap: false),
-          ExerciseSet(weight: 65, repetitions: 6, amrap: false),
-          ExerciseSet(weight: 70, repetitions: 1, amrap: true),
-          ExerciseSet(weight: 65, repetitions: 6, amrap: false),
+          ExerciseSet(weight: 60, repetitions: 8),
+          ExerciseSet(weight: 65, repetitions: 6),
+          ExerciseSet(weight: 70, repetitions: 1),
+          ExerciseSet(weight: 65, repetitions: 6),
         ]),
     Exercise(
         name: 'Overhead Press',
         targetMuscle: TargetMuscle.shoulders,
         sets: const <ExerciseSet>[
-          ExerciseSet(weight: 20, repetitions: 8, amrap: false),
-          ExerciseSet(weight: 30, repetitions: 6, amrap: false),
-          ExerciseSet(weight: 35, repetitions: 1, amrap: true),
-          ExerciseSet(weight: 30, repetitions: 6, amrap: false),
+          ExerciseSet(weight: 20, repetitions: 8),
+          ExerciseSet(weight: 30, repetitions: 6),
+          ExerciseSet(weight: 35, repetitions: 1),
+          ExerciseSet(weight: 30, repetitions: 6),
         ])
   ])
 ];

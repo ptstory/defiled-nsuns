@@ -9,15 +9,16 @@ class Exercise {
 }
 
 class ExerciseSet {
-  const ExerciseSet({this.weight, this.repetitions, this.amrap});
+  const ExerciseSet({this.weight, this.repetitions});
 
   final int weight;
   final int repetitions;
-  final bool amrap;
+
+  bool isAmrap() => repetitions == 1;
 
   String repetitionsToString() {
     var reps = repetitions.toString();
-    if (amrap) {
+    if (isAmrap()) {
       reps = reps + '+';
     }
     return reps;
