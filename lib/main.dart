@@ -22,6 +22,14 @@ List<DayProgram> programs = <DayProgram>[
           ExerciseSet(weight: 30, repetitions: 6),
           ExerciseSet(weight: 35, repetitions: 1),
           ExerciseSet(weight: 30, repetitions: 6),
+        ]),
+    Exercise(
+        name: 'Bicep Curl',
+        targetMuscle: TargetMuscle.arms,
+        sets: <ExerciseSet>[
+          ExerciseSet(weight: 10, repetitions: 8),
+          ExerciseSet(weight: 10, repetitions: 8),
+          ExerciseSet(weight: 10, repetitions: 8)
         ])
   ])
 ];

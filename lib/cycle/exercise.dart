@@ -42,4 +42,4 @@ class _ExerciseWidgetState extends State<ExerciseWidget> {
                       ]))));
 }
 
-enum TargetMuscle { chest, shoulders, back, legs, abs }
+enum TargetMuscle { chest, shoulders, back, legs, abs, arms }
