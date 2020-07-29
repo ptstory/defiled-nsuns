@@ -14,7 +14,7 @@ class DayProgramWidget extends StatelessWidget {
   final DayProgram dayProgram;
 
   @override
-  Widget build(BuildContext context) => Column(
+  Widget build(BuildContext context) => ListView(
       children: dayProgram.exercises
           .map((e) => ExerciseWidget(exercise: e))
           .toList());
