@@ -2,10 +2,11 @@ import 'package:defiled_nsuns/cycle/exerciseset.dart';
 import 'package:flutter/material.dart';
 
 class Exercise {
-  const Exercise({this.name, this.targetMuscle, this.sets});
+  const Exercise({this.name, this.targetMuscle, this.accessory, this.sets});
 
   final String name;
   final TargetMuscle targetMuscle;
+  final bool accessory;
   final List<ExerciseSet> sets;
 }
 

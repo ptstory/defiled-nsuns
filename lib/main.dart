@@ -8,6 +8,7 @@ List<DayProgram> programs = <DayProgram>[
     Exercise(
         name: 'Bench Press',
         targetMuscle: TargetMuscle.chest,
+        accessory: false,
         sets: <ExerciseSet>[
           ExerciseSet(weight: 60, repetitions: 8),
           ExerciseSet(weight: 65, repetitions: 6),
@@ -17,6 +18,7 @@ List<DayProgram> programs = <DayProgram>[
     Exercise(
         name: 'Overhead Press',
         targetMuscle: TargetMuscle.shoulders,
+        accessory: false,
         sets: <ExerciseSet>[
           ExerciseSet(weight: 20, repetitions: 8),
           ExerciseSet(weight: 30, repetitions: 6),
@@ -26,6 +28,7 @@ List<DayProgram> programs = <DayProgram>[
     Exercise(
         name: 'Bicep Curl',
         targetMuscle: TargetMuscle.arms,
+        accessory: true,
         sets: <ExerciseSet>[
           ExerciseSet(weight: 10, repetitions: 8),
           ExerciseSet(weight: 10, repetitions: 8),
