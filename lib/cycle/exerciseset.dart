@@ -93,7 +93,7 @@ class _ExerciseSetWidgetState extends State<ExerciseSetWidget> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     SizedBox(
-                        width: 36,
+                        width: 30,
                         child: TextField(
                             keyboardType: TextInputType.number,
                             controller: _textEditingController,
